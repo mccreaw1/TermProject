@@ -6,49 +6,49 @@ import Login from "./components/Login";
 import List from "./components/List";
 import Header from "./components/Header";
 import Navbar from "./components/Navbar";
+import LoginModal from "./components/LoginModal";
+import Books from "./data/book";
+import Home from "./components/Home";
+import RemoveBook from "./components/RemoveBook";
 
 import BookList from "./components/BookList";
 import FeedbackData from "./data/FeedbackData";
-
-// Modal.setAppElement("#root");
+import DisplaySale from "./components/DisplaySale";
 
 function App() {
   const [feedback, setFeedback] = useState(FeedbackData);
-
+  const [book, setBook] = useState();
   const deleteFeedback = (id) => {
-    console.log('App', id)
-    if(window.confirm('Are you sure to delete?'))
-    setFeedback(feedback.filter((item)=> item.id !== id))
-  }
+    console.log("App", id);
+    if (window.confirm("Are you sure to delete?"))
+      setFeedback(feedback.filter((item) => item.id !== id));
+  };
 
   return (
     <>
-      <div className="container">
+      <div className="container-default">
         <Navbar />
       </div>
       <Title />
-      <div className="container">
-        <Header />
+      <div className="container-default">
+        <DisplaySale />
       </div>
-      <div className="container">
-        <BookList feedback={feedback} handleDelete={deleteFeedback}/>
+      <div className="container-default">
+        <Home />
       </div>
-      <div className="container">
-      <Login />
+      <div className="container-default">
+      <RemoveBook/>
+      </div>
+      <div className="container-default">
+        {/* <Header />
+        <BookList feedback={feedback} handleDelete={deleteFeedback}/> */}
       </div>
 
-      <List />
+      <div className="container-default">
+        <List />
+      </div>
     </>
   );
 }
-
-// function MyButton() {
-//   return <button onClick={login}>Log in</button>;
-//   function login() {
-//     return <h3>This is supposed to display</h3>;
-//   }
-// }
-
-
 
 export default App;

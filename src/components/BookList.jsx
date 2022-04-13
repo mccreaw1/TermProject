@@ -4,6 +4,7 @@ import FeedbackItem from './FeedbackItem'
 import React from 'react'
 
 function BookList({feedback, handleDelete}) {
+  // Check if no book feedback exists and post message
     if(!feedback || feedback.length ===0) {
         return <p><h3>No book reviews available. <br/>Please refresh page.</h3></p>
     }
