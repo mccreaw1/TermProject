@@ -1,6 +1,5 @@
-// Temporary placeholder for subscription page
-
 import SubscribeForm from "../SubscribeForm";
+// import Register from "../../pages/Register";
 
 const initialState = {message: <SubscribeForm />};
 

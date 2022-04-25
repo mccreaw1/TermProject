@@ -35,7 +35,6 @@ function Login() {
             type="text"
             placeholder="Enter First Name"
             value={name}
-            
             required
           />
           <br />

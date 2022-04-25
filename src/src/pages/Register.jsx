@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import ThemeChange from './ThemeChange'
+// import ThemeChange from './ThemeChange'
+
 
 
 class Register extends Component {
@@ -14,7 +15,7 @@ class Register extends Component {
     return (
       <div className='App'>
         <h4 style={this.styles}>{this.props.message}</h4>
-        <ThemeChange onClick={this.ButtonChange}>Subscribe</ThemeChange>
+        {/* <ThemeChange onClick={this.ButtonChange}>Subscribe</ThemeChange> */}
       </div>
     )
   }
@@ -26,7 +27,7 @@ const mapStatetoProps = state => {
     }
 } 
 
-// This should dispatch the action tyoe to the reducer where the 
+// This should dispatch the action type to the reducer where the 
 // reducer if statement catches the change and the new message 
 // is posted
 const mapDispatchToProps = dispatch => {
@@ -34,6 +35,8 @@ const mapDispatchToProps = dispatch => {
   ButtonChange: () => dispatch({ type: "Message_change" })
   }
 }
+
+
 
 export default connect(
     mapStatetoProps,
