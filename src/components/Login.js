@@ -3,12 +3,8 @@ import { useState } from "react";
 function Login() {
   const [user, setUser] = useState('')
   const [pswd, setPswd] = useState('')
-  // add method to pass username and password;
-  const handleChange = (event) => {
-    // const userName = event.target.userName;
-    // const password = event.target.password;
-    // setInputs((values) => ({ ...values, [userName]: password }));
-  };
+  const [name, setName] = useState('')
+
 
   const handleUserChange =(e) => {
     setUser(e.target.value)
@@ -24,10 +20,23 @@ function Login() {
   };
 
   return (
-    <div className="login">
+    <div className="login App">
       <form onSubmit={handleSubmit}>
         <div className="container">
           <h2>Please Login</h2>
+          <br />
+
+          <label htmlFor="name">
+            <b>First Name</b>
+            <br />
+          </label>
+          <input
+            onChange={handleUserChange}
+            type="text"
+            placeholder="Enter First Name"
+            value={name}
+            required
+          />
           <br />
 
           <label htmlFor="userName">

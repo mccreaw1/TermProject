@@ -3,11 +3,12 @@
   --sec_main: #769973; /* green*/
   --prim_main: #536872; /* gray */
   --accent: #C6E6C3; /* mint */
-  --umber: #E6925A; /* umber */
+  --umber: #E6925A; /* orange */
   --tan: #99857A; /* umber */ 
   --black: #000000;
   --white:#ffffff;
   --red: #ff0000;
+  --blue: #0b5e87;
 }
 
 * {
@@ -33,14 +34,14 @@ input[type="text"],
 input[type="password"] {
   width: 35%;
   padding: 12px 20px;
-  margin: 8px 0;
+  margin: 10px 10px 10px 10px;
   display: inline-block;
   border: 1px solid var(--white);
   box-sizing: border-box;
   border-radius: 0%;
 }
 button {
-  background-color: var(--tan);
+  background-color: var(--accent);
   color: var(--black);
   font-weight: 900;
   padding: 14px 20px;
@@ -124,7 +125,6 @@ header {
   border: none;
 }
 
-
 .h1-title {
   font-size: 55px;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
@@ -163,7 +163,7 @@ img {
 }
 .login {
   /* background-color: rgb(250, 251, 255); */
-  background-color: var(--prim_main);
+  background-color: var(--tan);
   color: #030303;
   /* border-radius: 15px; */
   padding: 40px 20px;

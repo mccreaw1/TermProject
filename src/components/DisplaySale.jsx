@@ -8,7 +8,7 @@ class DisplaySale extends React.Component {
     this.state = { message: "Here is a message in white ",
                    color: 'white',
                   comp: <Header text="Banshi's SALE! 50% OFF ALL BOOKS ENDS SOON!" bgColor="red"/> }
-    console.log(`Dispaly Sale message in white text`)
+    console.log(`Dispaly Sale message`)
     }
     componentDidMount() {
         // The state will change after 5 seconds

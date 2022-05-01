@@ -7,14 +7,10 @@ function Header(props) {
     <>
       <header style ={{ backgroundColor: props.bgColor}}>
           <div className='container-default'>
-              <h3>{props.text}</h3>
+              <h3 style ={{color: props.color}}>{props.text}</h3>
           </div>
           
       </header>
-      {/* Image needs to be moved and add logic to render when no prop present */}
-      {/* <div className='container '>
-        <img src={loremBook} alt='Book of the month'/>
-      </div> */}
     </>
       
     
@@ -22,8 +18,9 @@ function Header(props) {
 }
 
 Header.defaultProps = {
-    text: "***  Banshi's Monthly Book Review  ***",
-    bgColor: 'tan' 
+    text: "***  Banshi's  ***",
+    bgColor: 'tan',
+    textcolor: 'white'
 }
 
 Header.propTypes = {
